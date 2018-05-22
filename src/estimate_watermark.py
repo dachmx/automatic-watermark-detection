@@ -169,6 +169,7 @@ def watermark_detector(img, gx, gy, thresh_low=200, thresh_high=220, printval=Fa
 	Wm = (np.average(np.sqrt(np.square(gx) + np.square(gy)), axis=2))
 
 	img_edgemap = (cv2.Canny(img, thresh_low, thresh_high))
+        print(img_edgemap)
 	chamfer_dist = cv2.filter2D(img_edgemap.astype(float), -1, Wm)
 
 	rect = Wm.shape

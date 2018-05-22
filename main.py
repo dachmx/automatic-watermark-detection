@@ -7,7 +7,7 @@ cropped_gx, cropped_gy = crop_watermark(gx, gy)
 W_m = poisson_reconstruct(cropped_gx, cropped_gy)
 
 # random photo
-img = cv2.imread('images/fotolia_processed/fotolia_137840645.jpg')
+img = cv2.imread('images/fotolia_processed/fotolia_75353029.jpg')
 im, start, end = watermark_detector(img, cropped_gx, cropped_gy)
 
 # plt.imshow(im)

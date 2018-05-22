@@ -127,8 +127,11 @@ def estimate_normalized_alpha(J, W_m, num_images=30, threshold=170, invert=False
 
     print("Estimating normalized alpha using %d images."%(num_images))
     # for all images, calculate alpha
-    for idx in xrange(num_images):
+    for idx in xrange(J.shape[0]):
         imgcopy = thr
+        print(J)
+        print(num_images)
+        print(J.shape)
         alph = closed_form_matte(J[idx], imgcopy)
         alpha[idx] = alph
 
